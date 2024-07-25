@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="671.0" style="-fx-background-color: #eb3b5a;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BorrowController">
+   <children>
+      <Label layoutX="246.0" layoutY="14.0" text="Borrowings" textFill="#00e9ff">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="77.0" prefHeight="21.0" prefWidth="52.0" text="Bor.ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBorrowingID" layoutX="141.0" layoutY="75.0" promptText="Borrowing ID" />
+      <Label layoutX="34.0" layoutY="110.0" prefHeight="21.0" prefWidth="52.0" text="Mem.ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMemberID" layoutX="141.0" layoutY="108.0" promptText="Member ID" />
+      <Label layoutX="34.0" layoutY="145.0" prefHeight="21.0" prefWidth="61.0" text="Book ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBookID" layoutX="141.0" layoutY="143.0" promptText="Book ID" />
+      <Label layoutX="34.0" layoutY="177.0" prefHeight="21.0" prefWidth="89.0" text="Borrow Date">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBorrowingDate" layoutX="141.0" layoutY="175.0" promptText="Borrowing Date" />
+      <Label layoutX="354.0" layoutY="77.0" prefHeight="21.0" prefWidth="69.0" text="Due Date">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDueDate" layoutX="459.0" layoutY="75.0" promptText="Due Date" />
+      <Label layoutX="354.0" layoutY="110.0" prefHeight="21.0" prefWidth="89.0" text="Return Date">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtReturnDate" layoutX="459.0" layoutY="108.0" promptText="Return Date" />
+      <Label layoutX="354.0" layoutY="145.0" prefHeight="20.0" prefWidth="36.0" text="Fine">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFine" layoutX="459.0" layoutY="143.0" promptText="Fine" />
+      <TableView fx:id="tblborrow" layoutX="20.0" layoutY="209.0" prefHeight="181.0" prefWidth="630.0" style="-fx-background-color: #ffeaa7;">
+        <columns>
+          <TableColumn fx:id="colborrowid" prefWidth="81.0" text="Borrowing ID" />
+          <TableColumn fx:id="colmemberid" prefWidth="72.0" text="Member ID" />
+            <TableColumn fx:id="colbookid" prefWidth="63.0" text="Book ID" />
+            <TableColumn fx:id="colborrowdate" prefWidth="111.0" text="Borrowing date" />
+            <TableColumn fx:id="colduedate" prefWidth="84.0" text="Due date" />
+            <TableColumn fx:id="colreturndate" prefWidth="86.0" text="Retuen date" />
+            <TableColumn fx:id="colfine" prefWidth="63.0" text="Fine" />
+            <TableColumn fx:id="colaction" prefWidth="69.0" text="Action" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="489.0" layoutY="405.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="133.0" style="-fx-background-color: #fbc531;" text="SAVE CHANGES">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
